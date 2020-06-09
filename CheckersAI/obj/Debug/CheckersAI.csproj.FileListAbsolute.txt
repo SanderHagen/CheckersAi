@@ -1,0 +1,13 @@
+C:\Code\CheckersAI\CheckersAI\bin\Debug\CheckersAI.exe.config
+C:\Code\CheckersAI\CheckersAI\bin\Debug\CheckersAI.exe
+C:\Code\CheckersAI\CheckersAI\bin\Debug\CheckersAI.pdb
+C:\Code\CheckersAI\CheckersAI\obj\Debug\CheckersAI.csprojAssemblyReference.cache
+C:\Code\CheckersAI\CheckersAI\obj\Debug\CheckersAI.Form1.resources
+C:\Code\CheckersAI\CheckersAI\obj\Debug\CheckersAI.Properties.Resources.resources
+C:\Code\CheckersAI\CheckersAI\obj\Debug\CheckersAI.csproj.GenerateResource.cache
+C:\Code\CheckersAI\CheckersAI\obj\Debug\CheckersAI.csproj.CoreCompileInputs.cache
+C:\Code\CheckersAI\CheckersAI\obj\Debug\CheckersAI.exe
+C:\Code\CheckersAI\CheckersAI\obj\Debug\CheckersAI.pdb
+C:\Code\CheckersAI\CheckersAI\obj\Debug\CheckersAI.Game.Tile.resources
+C:\Code\CheckersAI\CheckersAI\obj\Debug\CheckersAI.Game.Board.resources
+C:\Code\CheckersAI\CheckersAI\obj\Debug\CheckersAI.Game.GameEngine.resources
