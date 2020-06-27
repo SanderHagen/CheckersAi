@@ -61,14 +61,7 @@ namespace CheckersAI.Game
 
         public Tile GetTileAtPosition(int row, int column)
         {
-            try
-            {
-                return board[row, column];
-            }
-            catch (IndexOutOfRangeException e)
-            {
-                return 0;
-            }
+            return board[row, column];
         }
 
         public void MovePiece(Tile pieceToMove, int desiredRow, int desiredColumn)

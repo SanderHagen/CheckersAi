@@ -42,7 +42,7 @@ namespace TestProject.Game
         [TestMethod]
         public void TestGetTileAtInvalidPosition()
         {
-            Assert.AreEqual(0, board.GetTileAtPosition(-10, 1).GetPieceColor());
+            var exception = Assert.ThrowsException<IndexOutOfRangeException>(() => board.GetTileAtPosition(-10, 1));
         }
     }
 }
