@@ -13,10 +13,10 @@ namespace CheckersAI.Game
         private static readonly int MaxColumns = 10;
 
         private Tile originalTile;
-        private bool tileSelected = false;
+        private bool previousTileSelected = false;
         public Tile[,] board;
 
-        public event EventHandler OnChangeTurns;
+        public event EventHandler PlayerTurnDone;
 
         public Board()
         {
@@ -77,21 +77,22 @@ namespace CheckersAI.Game
         private void tile_OnTileSelected(object sender, EventArgs e)
         {
             Tile tile = (Tile)sender;
-            if (tileSelected)
+            if (previousTileSelected)
             {
                 if (!PieceMover.IsValidMove(this, originalTile, tile.Row, tile.Column))
                 {
-                    tileSelected = false;
+                    previousTileSelected = false;
                     return;
                 }
 
                 PieceMover.MovePiece(this, originalTile, tile.Row, tile.Column);
-                tileSelected = false;
-                OnChangeTurns?.Invoke(this, null);
+                previousTileSelected = false;
+                PlayerTurnDone?.Invoke(this, null);
+
                 return;
             }
             originalTile = tile;
-            tileSelected = true;
+            previousTileSelected = true;
         }
     }
 }

@@ -8,7 +8,7 @@ namespace CheckersAI.Game
 {
     enum Players
     {
-        Black,
-        White
+        Black, // AI
+        White // Player
     }
 }
