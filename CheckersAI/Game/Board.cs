@@ -76,6 +76,11 @@ namespace CheckersAI.Game
 
         private void tile_OnTileSelected(object sender, EventArgs e)
         {
+            if(GameEngine.currentPlayer == Players.Black)
+            {
+                return;
+            }
+
             Tile tile = (Tile)sender;
             if (previousTileSelected)
             {

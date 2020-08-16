@@ -6,14 +6,14 @@ namespace CheckersAI.Game
 {
     public partial class GameEngine : UserControl
     {
-        public static string currentPlayer = Players.White.ToString();
+        public static Players currentPlayer = Players.White;
 
         private AIController AIController;
 
         public GameEngine()
         {
             InitializeComponent();
-            AIController = new AIController();
+            AIController = new AIController(board);
             playerTurnValue.Text = Players.White.ToString();
             board.PlayerTurnDone += new EventHandler(PlayerTurnDone);
             AIController.AiMoveDone += new EventHandler(AITurnDone);
@@ -43,15 +43,15 @@ namespace CheckersAI.Game
 
         private void SwitchTurns()
         {
-            if (currentPlayer == Players.White.ToString())
+            if (currentPlayer == Players.White)
             {
-                currentPlayer = Players.Black.ToString();
-                playerTurnValue.Text = currentPlayer;
+                currentPlayer = Players.Black;
+                playerTurnValue.Text = currentPlayer.ToString();
                 return;
             }
 
-            currentPlayer = Players.White.ToString();
-            playerTurnValue.Text = currentPlayer;
+            currentPlayer = Players.White;
+            playerTurnValue.Text = currentPlayer.ToString();
         }
     }
 }

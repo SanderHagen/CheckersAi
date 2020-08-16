@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CheckersAI.Game
 {
-    enum Players
+    public enum Players
     {
         Black, // AI
         White // Player

@@ -19,7 +19,7 @@ namespace CheckersAI.Helpers
                 IsTileForwards(pieceToMove, desiredRow) &&
                 IsTileDiagonal(pieceToMove, desiredColumn) &&
                 PlayerOwnsTile(pieceToMove);
-            }
+        }
 
         private static bool PlayerOwnsTile(Tile pieceToMove)
         {
@@ -29,12 +29,12 @@ namespace CheckersAI.Helpers
 
         private static bool WhitePlayerTurnAndOwnsTile(Tile pieceToMove)
         {
-            return GameEngine.currentPlayer == Players.White.ToString() && pieceToMove.GetPieceColor() > 0;
+            return GameEngine.currentPlayer == Players.White && pieceToMove.GetPieceColor() > 0;
         }
 
         private static bool BlackPlayerTurnAndOwnsTile(Tile pieceToMove)
         {
-            return GameEngine.currentPlayer == Players.Black.ToString() && pieceToMove.GetPieceColor() < 0;
+            return GameEngine.currentPlayer == Players.Black && pieceToMove.GetPieceColor() < 0;
         }
 
         private static bool IsTileEmpty(Tile[,] board, int row, int column)
